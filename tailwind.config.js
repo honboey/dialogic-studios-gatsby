@@ -5,6 +5,14 @@ module.exports = {
     extend: {
       fontFamily: {
         'body': ['"Untitled Sans"', 'ui-sans-serif']
+      },
+      colors: {
+        ds: {
+          black: "#404040",
+          grey: "#808080",
+          white: "#f7f7f7",
+          orange: "#ff4e00"
+        }
       }
     },
   },
