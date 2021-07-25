@@ -3,7 +3,7 @@ import "../styles/global.css"
 
 function IndexPage() {
   return(
-    <h1>Hello</h1>
+    <h1 className="font-body">Hello</h1>
   )
 }
 

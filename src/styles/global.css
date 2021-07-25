@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Untitled Sans;
+        font-weight: 300;
+        src: url(../fonts/untitled-sans-web-light.woff);
+    }
+}

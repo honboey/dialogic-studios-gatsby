@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 function NotFoundPage() {
   return(
-    <h2>404</h2>
+    <h2 className="text-2xl">404</h2>
   )
 }
 
