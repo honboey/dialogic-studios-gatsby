@@ -11,12 +11,12 @@ function IndexPage() {
         </p>
       </section>
 
-      <section className="clear-right mb-12 mb-8 md:mb-12 xl:mb-16">
+      <section className="clear-right mb-8 md:mb-12 xl:mb-16">
         <ul>
           <li className="mb-8 md:mb-12 xl:mb-16">
             <div className="lg:flex items-baseline mb-1 md:mb-3 xl:mb-4">
               <div className="lg:w-1/2">
-                <h2 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">ational Library of Australia</h2>
+                <h2 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">National Library of Australia</h2>
               </div>
               <div className="lg:w-1/2">
                 <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey">Art direction, editorial, campaign</p>
