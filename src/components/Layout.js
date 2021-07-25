@@ -33,8 +33,8 @@ function Layout({children}) {
                 {children}
 
                 <footer>
-                    <div class="border-t border-black flex flex-wrap justify-between pt-12 md:pt-16 xl:pt-20 text-xs sm:text-sm lg:base">
-                        <nav class="w-1/3 md:w-1/12">
+                    <div className="border-t border-black flex flex-wrap justify-between pt-12 md:pt-16 xl:pt-20 text-xs sm:text-sm lg:base">
+                        <nav className="w-1/3 md:w-1/12">
                             <ul>
                                 <li>
                                     <Link to="/work">Work</Link>
@@ -42,7 +42,7 @@ function Layout({children}) {
                                 <li>
                                     <Link to="/about">About</Link>
                                 </li>
-                                <li class="mb-3 lg:mb-6">
+                                <li className="mb-3 lg:mb-6">
                                     <Link to="/contact">Contact</Link>
                                 </li>
                                 <li>
@@ -50,20 +50,20 @@ function Layout({children}) {
                                 </li>
                             </ul>
                         </nav>
-                        <div class="w-2/3 md:w-1/4">
+                        <div className="w-2/3 md:w-1/4">
                             
-                            <p class="mb-3 lg:mb-6">Site designed by Dialogic Studios.</p>
+                            <p className="mb-3 lg:mb-6">Site designed by Dialogic Studios.</p>
                                 <p>Site built by Dialogic Studios and <a href="https://thislittleduck.com/">This Little Duck</a>.</p>
 
-                            <p class="mb-6">Type designed by
+                            <p className="mb-6">Type designed by
                                 <a href="https://klim.co.nz/">Klim Type Foundry</a>.</p>
 
-                            <p class="mb-6">This site was hand coded using the
+                            <p className="mb-6">This site was hand coded using the
                                 <a href="https://tailwindcss.com/">TailwindCSS</a> framework.</p>
                         </div>
 
-                        <div class="md:w-1/2">
-                            <p class="mb-3 lg:mb-6">The Gadigal People of the Eora Nation were some of the world’s very first designers. Their experience spans over 40,000 years and their expertise in graphic storytelling has never been surpassed. We acknowledge and pay respect to their work and to their Elders, past, present and future.</p>
+                        <div className="md:w-1/2">
+                            <p className="mb-3 lg:mb-6">The Gadigal People of the Eora Nation were some of the world’s very first designers. Their experience spans over 40,000 years and their expertise in graphic storytelling has never been surpassed. We acknowledge and pay respect to their work and to their Elders, past, present and future.</p>
 
                             <p>Always was, always will be, Aboriginal land.</p>
                         </div>
