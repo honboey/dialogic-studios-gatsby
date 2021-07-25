@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from "../components/Layout"
+import { Link } from "gatsby"
 import "../styles/global.css"
 
 function IndexPage() {
@@ -22,13 +23,13 @@ function IndexPage() {
                 <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey">Art direction, editorial, campaign</p>
               </div>
             </div>
-            <a href="/nla">
+            <Link to="/nla">
               <img
                 className="w-full lazyload"
                 src="/img/nla/nla01-lazy.jpg"
                 data-src="/img/nla/nla01.jpg"
                 data-srcset="/img/nla/nla01-1440w.jpg 1440w, /img/nla/nla01-800w.jpg 800w, /img/nla/nla01-1080w.jpg 1080w, /img/nla/nla01.jpg 2000w"
-                alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></a>
+                alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
           </li>
 
           <li className="mb-8 md:mb-12 xl:mb-16">
@@ -42,12 +43,12 @@ function IndexPage() {
                 </p>
               </div>
             </div>
-            <a href="/stc"><img
+            <Link to="/stc"><img
                 className="w-full lazyload"
                 src="/img/stc/stc01-lazy.jpg"
                 data-src="/img/stc/stc01.jpg"
                 data-srcset="/img/stc/stc01-1440w.jpg 1440w, /img/stc/stc01-800w.jpg 800w, /img/stc/stc01-1080w.jpg 1080w, /img/stc/stc01.jpg 2000w"
-                alt="STC posters on bus shelters in Sydney"/></a>
+                alt="STC posters on bus shelters in Sydney"/></Link>
           </li>
 
           <li className="mb-8 md:mb-12 xl:mb-16">
@@ -61,12 +62,12 @@ function IndexPage() {
                 </p>
               </div>
             </div>
-            <a href="/muse"><img
+            <Link to="/muse"><img
                 className="w-full lazyload"
                 src="/img/muse/m26-07-lazy.jpg"
                 data-src="/img/muse/m26-07.jpg"
                 data-srcset="/img/muse/m26-07-1440w.jpg 1440w, /img/muse/m26-07-800w.jpg 800w, /img/muse/m26-07-1080w.jpg 1080w, /img/muse/m26-07.jpg 2000w"
-                alt="A studio shot of a parrot, an ancient Greek vase and a impressionist painting"/></a>
+                alt="A studio shot of a parrot, an ancient Greek vase and a impressionist painting"/></Link>
           </li>
           
           <li className="mb-8 md:mb-12 xl:mb-16">
@@ -80,16 +81,16 @@ function IndexPage() {
                 </p>
               </div>
             </div>
-            <a href="/headcase"><img
+            <Link to="/headcase"><img
                 className="w-full lazyload"
                 src="/img/headcase/headcase01-lazy.jpg"
                 data-src="/img/headcase/headcase01.jpg"
                 data-srcset="/img/headcase/headcase01-1440w.jpg 1440w, /img/headcase/headcase01-800w.jpg 800w, /img/headcase/headcase01-1080w.jpg 1080w, /img/headcase/headcase01.jpg 2000w"
-                alt="Herbs on a table"/></a>
+                alt="Herbs on a table"/></Link>
           </li>
         </ul>
         <p className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">
-          <a href="/work">View our complete portfolio</a>
+          <Link to="/work">View our complete portfolio</Link>
         </p>
       </section>
 
