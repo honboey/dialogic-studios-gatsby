@@ -3,30 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: Untitled Sans;
-        font-weight: 300;
-        src: url(../fonts/untitled-sans-web-light.woff);
-    }
+  @font-face {
+    font-family: Untitled Sans;
+    font-weight: 300;
+    src: url(../fonts/untitled-sans-web-light.woff);
+  }
+  .wrapper {
+    @apply p-5 mx-auto font-body font-light;
+  }
+  @screen sm {
     .wrapper {
-        @apply p-5 mx-auto font-body font-light;
-      }
-      @screen sm {
-        .wrapper {
-          @apply p-12;
-        }
-      }
-      @media screen and (min-width: 1500px) {
-        .wrapper {
-          @apply py-12 px-24;
-        }
-      }
-      a {
-        border-bottom: 0.5px solid #ff4e00;
-      }
-       /*  Logo SVG class */ 
-      .cls-1 {
-        fill: #ff4e00
-      }
+      @apply p-12;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .wrapper {
+      @apply py-12 px-24;
+    }
+  }
+  a {
+    border-bottom: 0.5px solid #ff4e00;
+  }
+  /*  Logo SVG class */
+  .cls-1 {
+    fill: #ff4e00;
+  }
 }
-
