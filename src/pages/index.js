@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import FeaturedProject from "../components/FeaturedProject";
 import { graphql, Link } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function IndexPage( {data} ) {
@@ -17,6 +17,8 @@ function IndexPage( {data} ) {
         <ul>
           <FeaturedProject projectName="National Library of Australia" services="Art direction, editorial, campaign" featureImage={image} altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"/>
         </ul>
+
+        <GatsbyImage image={image}/>
 
         <p className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl"><Link to="/work">View our complete portfolio</Link></p>
       </section>
