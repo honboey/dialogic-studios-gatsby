@@ -40,7 +40,7 @@ function WorkPage() {
                 <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
               </div>
               <div className="xl:w-3/5">
-                <a href="/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></a>
+                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
               </div>
             </li>
             
@@ -50,7 +50,7 @@ function WorkPage() {
                 <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
               </div>
               <div className="xl:w-3/5">
-                <a href="/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></a>
+                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
               </div>
             </li>
             
@@ -60,7 +60,7 @@ function WorkPage() {
                 <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
               </div>
               <div className="xl:w-3/5">
-                <a href="/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></a>
+                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
               </div>
             </li>
             
@@ -70,9 +70,11 @@ function WorkPage() {
                 <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
               </div>
               <div className="xl:w-3/5">
-                <a href="/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></a>
+                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
               </div>
             </li>
+            
+            
             
             </ul>
         </section>

@@ -10,8 +10,8 @@ function NLAPage() {
         <h2 className="text-2xl lg:text-3xl xl:text-4xl leading-normal lg:leading-normal xl:leading-normal">The National Library of Australia</h2>
         <p className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl leading-normal lg:leading-normal xl:leading-normal mb-3 xl:mb-4 text-ds-grey">Raising funds for the digitisation of Australia's largest archive</p>
 
-        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
-        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
+        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
+        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
 
         <div className="md:flex md:items-start md:justify-between mb-6 md:mb-10 xl:mb-14">
             <div className="md:w-5/12">
@@ -57,13 +57,13 @@ function NLAPage() {
             </table>
         </div>
 
-        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
+        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
 
         <div className="md:w-7/12 lg:w-1/2 float-right">
             <p className="mb-4 lg:mb-8">A key part of the Library's campaign was a beautiful booklet to go to potential donors. For the cover, we paired the familiar kraft board of archival boxes with the marble patterning of the Library's foyer. And the inside housed James Green amazing shots of Australians interacting with the Digital Archives from the comfort of their own homes.</p>
         </div>
 
-        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
+        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
 
         <p className="text-2xl lg:text-3xl xl:text-4xl mb-6 md:mb-10 xl:mb-14">
             <Link to="../work">View more of our work</Link>
