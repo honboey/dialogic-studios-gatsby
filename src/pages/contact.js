@@ -1,13 +1,12 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function ContactPage() {
   return (
     <Layout>
-      <div class="flex md:justify-end mb-8 lg:mb-16">
+      <div class="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal flex md:justify-end mb-8 lg:mb-16">
         <div class="md:w-7/12 lg:w-1/2">
           <p class="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey">Telephone / WhatsApp</p>
           <p class="mb-4 lg:mb-8"><a href="tel:+61405266261">+61 405 266 261</a></p>
