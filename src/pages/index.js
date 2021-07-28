@@ -51,11 +51,10 @@ export const query = graphql`
     allFile(filter: {id: {eq: "5ece5359-e721-5651-979f-14ba9f039969"}}) {
       nodes {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, formats: JPG)
         }
-        id
       }
     }
-  }
+  }  
 `
 export default IndexPage;
