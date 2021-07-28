@@ -1,8 +1,8 @@
 import * as React from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import "../styles/global.css";
+import "../../styles/global.css";
 
 function NLAPage() {
   return (
@@ -66,7 +66,7 @@ function NLAPage() {
         <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
 
         <p className="text-2xl lg:text-3xl xl:text-4xl mb-6 md:mb-10 xl:mb-14">
-            <a href="/work">View more of our work</a>
+            <Link to="../work">View more of our work</Link>
         </p>
     </Layout>
   );
