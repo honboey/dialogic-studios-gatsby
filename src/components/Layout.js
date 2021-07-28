@@ -5,7 +5,7 @@ import "../styles/global.css";
 function Layout({ children }) {
   return (
     <>
-      <div className="wrapper">
+      <div className="wrapper text-lg sm:text-2xl lg:text-3xl xl:text-4xl leading-normal">
         <header className="mb-8 md:mb-12 xl:mb-16">
           <nav className="flex">
             <div className="h-8 w-1/2 md:w-5/12 lg:w-1/2 pt-1">

@@ -7,7 +7,7 @@ import "../styles/global.css";
 function AboutPage() {
   return (
     <Layout>
-      <div class="flex md:justify-end text-lg sm:text-2xl lg:text-3xl xl:text-4xl mb-8 lg:mb-16">
+      <div class="flex md:justify-end mb-8 lg:mb-16">
         <div class="md:w-7/12 lg:w-1/2">
           <p class="mb-4 lg:mb-8">Dialogic Studios is an agency that specialises in visual communications. Our strengths lie in brand identities, art direction, web design and publication design.</p>
 
