@@ -1,10 +1,12 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import FeaturedProject from "../components/FeaturedProject";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
-function IndexPage() {
+function IndexPage( {data} ) {
+  const image = getImage(data.allFile.nodes[0])
   return (
     <Layout>
       <section className="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal md:w-7/12 lg:w-1/2 md:float-right mb-8 md:mb-12 xl:mb-16">
@@ -13,7 +15,7 @@ function IndexPage() {
 
       <section className="clear-right mb-8 md:mb-12 xl:mb-16">
         <ul>
-          <FeaturedProject projectName="National Library of Australia" services="Art direction, editorial, campaign" featuredImagePath="../images/nla.jpg"/>
+          <FeaturedProject projectName="National Library of Australia" services="Art direction, editorial, campaign" featureImage={image} altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"/>
         </ul>
 
         <p className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl"><Link to="/work">View our complete portfolio</Link></p>
@@ -42,4 +44,16 @@ function IndexPage() {
   );
 }
 
+export const query = graphql`
+  query {
+    allFile(filter: {id: {eq: "5ece5359-e721-5651-979f-14ba9f039969"}}) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+        id
+      }
+    }
+  }
+`
 export default IndexPage;

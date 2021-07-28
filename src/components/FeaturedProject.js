@@ -1,10 +1,9 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function FeaturedProject(props) {
-    console.log(props.featuredImagePath)
     return (
         <li className="mb-8 md:mb-12 xl:mb-16">
             <div className="lg:flex items-baseline mb-1 md:mb-3 xl:mb-4">
@@ -16,11 +15,10 @@ function FeaturedProject(props) {
                 </div>
             </div>
             <Link to="/nla">
-                <StaticImage className="w-full" src={props.featuredImagePath} placeholder="blurred" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/>
+                <GatsbyImage className="w-full" image={props.featureImage} alt={props.altText}/>
             </Link>
         </li>
     )
 }
-
 
 export default FeaturedProject
