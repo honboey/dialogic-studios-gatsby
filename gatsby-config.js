@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -17,5 +21,16 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-prismic",
+      options: {
+        repositoryName: "dialogicstudios",
+        accessToken: `${process.env.API_KEY}`,
+        linkResolver: ({ node, key, value }) => project => `/${project.uid}`,
+        schemas: {
+          project: require("./custom_types/project.json"),
+        },
+      },
+    }
   ],
 };

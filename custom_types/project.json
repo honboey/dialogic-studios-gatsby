@@ -1,0 +1,45 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug",
+        "placeholder" : "nla"
+      }
+    },
+    "project_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Project Title",
+        "placeholder" : "Name of project"
+      }
+    },
+    "services" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "services",
+        "placeholder" : "art direction"
+      }
+    },
+    "lede" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Lede",
+        "placeholder" : "One liner about the project"
+      }
+    },
+    "feature_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 2000,
+          "height" : 1333
+        },
+        "thumbnails" : [ ],
+        "label" : "Feature image"
+      }
+    }
+  }
+}
