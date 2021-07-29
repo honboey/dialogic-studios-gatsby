@@ -14,7 +14,7 @@ function FeaturedProjectItem(props) {
                 <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey">{props.services}</p>
                 </div>
             </div>
-            <Link to="/nla">
+            <Link to="/projects/nla">
                 <GatsbyImage className="w-full" image={props.featureImage} alt={props.altText}/>
             </Link>
         </li>
