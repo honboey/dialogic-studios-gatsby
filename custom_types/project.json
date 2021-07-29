@@ -1,5 +1,21 @@
 {
   "Main" : {
+    "featured" : {
+      "type" : "Boolean",
+      "config" : {
+        "placeholder_false" : "not featured",
+        "placeholder_true" : "featured",
+        "default_value" : false,
+        "label" : "featured"
+      }
+    },
+    "order" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "order",
+        "placeholder" : "1"
+      }
+    },
     "uid" : {
       "type" : "UID",
       "config" : {
