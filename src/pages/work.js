@@ -1,13 +1,15 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import ProjectItem from "../components/ProjectItem";
+import { graphql, Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
-function WorkPage() {
+function WorkPage( {data} ) {
+  const image = getImage(data.allFile.nodes[0])
+
   return (
     <Layout>
-      
       <div className="xl:flex">
         <nav className="flex xl:block xl:w-1/6 text-sm sm:text-lg lg:text-xl xl:text-2xl leading-normal lg:leading-normal xl:leading-normal border-t border-b border-black xl:border-none py-3 mb-8 md:mb-12 xl:mb-16">
           <div className="w-1/2 md:w-5/12 lg:w-1/2 xl:w-full mb-4 lg:mb-8">
@@ -34,53 +36,41 @@ function WorkPage() {
 
         <section id="work" className="xl:w-5/6">
           <ul>
-            <li className="xl:flex mb-8 md:mb-12 xl:mb-16 transition ease-in duration-200 all art-direction editorial campaign" >
-              <div className="xl:w-2/5">
-                <h2 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">The National Library of Australia</h2>
-                <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
-              </div>
-              <div className="xl:w-3/5">
-                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
-              </div>
-            </li>
-            
-            <li className="xl:flex mb-8 md:mb-12 xl:mb-16 transition ease-in duration-200 all art-direction editorial campaign" >
-              <div className="xl:w-2/5">
-                <h2 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">The National Library of Australia</h2>
-                <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
-              </div>
-              <div className="xl:w-3/5">
-                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
-              </div>
-            </li>
-            
-            <li className="xl:flex mb-8 md:mb-12 xl:mb-16 transition ease-in duration-200 all art-direction editorial campaign" >
-              <div className="xl:w-2/5">
-                <h2 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">The National Library of Australia</h2>
-                <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
-              </div>
-              <div className="xl:w-3/5">
-                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
-              </div>
-            </li>
-            
-            <li className="xl:flex mb-8 md:mb-12 xl:mb-16 transition ease-in duration-200 all art-direction editorial campaign" >
-              <div className="xl:w-2/5">
-                <h2 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">The National Library of Australia</h2>
-                <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >Art direction, editorial, campaign</p>
-              </div>
-              <div className="xl:w-3/5">
-                <Link to="/projects/nla"><StaticImage src="../images/nla01.jpg" alt="A photo from the National Library fundraising campaign art directed by Dialogic Studios. A man and his two sons sitting on a patio in rural Australia looking at an iPad"/></Link>
-              </div>
-            </li>
-            
-            
-            
-            </ul>
+            <ProjectItem 
+              projectName="National Library of Australia" 
+              services="Art direction, editorial, campaign" 
+              featureImage={image} 
+              altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
+            />
+            <ProjectItem 
+              projectName="National Library of Australia" 
+              services="Art direction, editorial, campaign" 
+              featureImage={image} 
+              altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
+            />
+            <ProjectItem 
+              projectName="National Library of Australia" 
+              services="Art direction, editorial, campaign" 
+              featureImage={image} 
+              altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
+            />
+          </ul>
         </section>
       </div>
     </Layout>
   );
 }
+
+export const query = graphql`
+  query {
+    allFile(filter: {id: {eq: "5ece5359-e721-5651-979f-14ba9f039969"}}) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+    }
+  }  
+`
 
 export default WorkPage;

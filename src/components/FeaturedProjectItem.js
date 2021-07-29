@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
-function FeaturedProject(props) {
+function FeaturedProjectItem(props) {
     return (
         <li className="mb-8 md:mb-12 xl:mb-16">
             <div className="lg:flex items-baseline mb-1 md:mb-3 xl:mb-4">
@@ -21,4 +21,4 @@ function FeaturedProject(props) {
     )
 }
 
-export default FeaturedProject
+export default FeaturedProjectItem

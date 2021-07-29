@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import FeaturedProject from "../components/FeaturedProject";
+import FeaturedProjectItem from "../components/FeaturedProjectItem";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
@@ -15,10 +15,25 @@ function IndexPage( {data} ) {
 
       <section className="clear-right mb-8 md:mb-12 xl:mb-16">
         <ul>
-          <FeaturedProject projectName="National Library of Australia" services="Art direction, editorial, campaign" featureImage={image} altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"/>
+          <FeaturedProjectItem 
+            projectName="National Library of Australia" 
+            services="Art direction, editorial, campaign" 
+            featureImage={image} 
+            altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
+            />
+          <FeaturedProjectItem 
+            projectName="National Library of Australia" 
+            services="Art direction, editorial, campaign" 
+            featureImage={image} 
+            altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
+            />
+          <FeaturedProjectItem 
+            projectName="National Library of Australia" 
+            services="Art direction, editorial, campaign" 
+            featureImage={image} 
+            altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
+            />
         </ul>
-
-        <GatsbyImage image={image}/>
 
         <p className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl"><Link to="/work">View our complete portfolio</Link></p>
       </section>
@@ -51,7 +66,7 @@ export const query = graphql`
     allFile(filter: {id: {eq: "5ece5359-e721-5651-979f-14ba9f039969"}}) {
       nodes {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, formats: JPG)
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
