@@ -17,7 +17,8 @@ function IndexPage( {data} ) {
         <ul>
           {
             data.allPrismicProject.nodes.map((element) => (
-              <FeaturedProjectItem 
+              <FeaturedProjectItem
+                key={element.uid}
                 projectName={element.data.project_title.text}
                 services={element.data.services}
                 featureImage={getImage(element.data.feature_image.gatsbyImageData)}

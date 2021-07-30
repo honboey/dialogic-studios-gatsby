@@ -5,7 +5,7 @@ import Layout from "../../components/Layout";
 import { graphql, Link } from "gatsby";
 import { getImage, StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import { RichText } from "prismic-reactjs";
-import htmlSerializerProjects from "../../components/htmlSerializerProjects"
+import htmlSerializerProjects from "../../utils/htmlSerializerProjects"
 
 import "../../styles/global.css";
 
