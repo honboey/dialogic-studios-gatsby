@@ -1,13 +1,11 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import ProjectItem from "../components/ProjectItem";
-import { graphql, Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function WorkPage( {data} ) {
-  const image = getImage(data.allFile.nodes[0])
-
   return (
     <Layout>
       <div className="xl:flex">
@@ -36,24 +34,17 @@ function WorkPage( {data} ) {
 
         <section id="work" className="xl:w-5/6">
           <ul>
-            <ProjectItem 
-              projectName="National Library of Australia" 
-              services="Art direction, editorial, campaign" 
-              featureImage={image} 
-              altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
-            />
-            <ProjectItem 
-              projectName="National Library of Australia" 
-              services="Art direction, editorial, campaign" 
-              featureImage={image} 
-              altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
-            />
-            <ProjectItem 
-              projectName="National Library of Australia" 
-              services="Art direction, editorial, campaign" 
-              featureImage={image} 
-              altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
-            />
+            {
+              data.allPrismicProject.nodes.map((element) => (
+                <ProjectItem 
+                  projectName={element.data.project_title.text}
+                  services={element.data.services}
+                  featureImage={getImage(element.data.feature_image.gatsbyImageData)}
+                  altText={element.data.feature_image.alt}
+                  slug={element.uid}
+                  />
+              ))
+            }
           </ul>
         </section>
       </div>
@@ -62,15 +53,26 @@ function WorkPage( {data} ) {
 }
 
 export const query = graphql`
-  query {
-    allFile(filter: {id: {eq: "5ece5359-e721-5651-979f-14ba9f039969"}}) {
-      nodes {
-        childImageSharp {
+query {
+  allPrismicProject(
+    sort: {fields: data___order}    
+  ) {
+    nodes {
+      data {
+        project_title {
+          text
+        }
+        order
+        services
+        feature_image {
           gatsbyImageData(placeholder: BLURRED)
+          alt
         }
       }
+      uid
     }
-  }  
+  }
+}
 `
 
 export default WorkPage;

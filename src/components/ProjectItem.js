@@ -11,7 +11,7 @@ function ProjectItem(props) {
             <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey mb-1 md:mb-3 xl:mb-4" >{props.services}</p>
             </div>
             <div className="xl:w-3/5">
-            <Link to="/projects/nla"><GatsbyImage image={props.featureImage} alt={props.altText}/></Link>
+            <Link to={"../projects/" + props.slug} ><GatsbyImage image={props.featureImage} alt={props.altText}/></Link>
             </div>
         </li>
     )

@@ -6,8 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function IndexPage( {data} ) {
-  const image = getImage(data.allPrismicProject.nodes[0].data.feature_image.gatsbyImageData)
-  console.log(image)
+  console.log(data.allPrismicProject.nodes[0].data.feature_image.alt)
   return (
     <Layout>
       <section className="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal md:w-7/12 lg:w-1/2 md:float-right mb-8 md:mb-12 xl:mb-16">
@@ -22,6 +21,8 @@ function IndexPage( {data} ) {
                 projectName={element.data.project_title.text}
                 services={element.data.services}
                 featureImage={getImage(element.data.feature_image.gatsbyImageData)}
+                altText={element.data.feature_image.alt}
+                slug={element.uid}
                 />
             ))
           }
@@ -68,6 +69,7 @@ query {
         services
         feature_image {
           gatsbyImageData(placeholder: BLURRED)
+          alt
         }
       }
       uid
