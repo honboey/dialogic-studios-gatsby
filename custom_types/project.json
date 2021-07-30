@@ -1,68 +1,116 @@
 {
-  "Main" : {
-    "featured" : {
-      "type" : "Boolean",
-      "config" : {
-        "placeholder_false" : "not featured",
-        "placeholder_true" : "featured",
-        "default_value" : false,
-        "label" : "featured"
+  "Main": {
+    "featured": {
+      "type": "Boolean",
+      "config": {
+        "placeholder_false": "not featured",
+        "placeholder_true": "featured",
+        "default_value": false,
+        "label": "featured"
       }
     },
-    "order" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "order",
-        "placeholder" : "1"
+    "order": {
+      "type": "Number",
+      "config": {
+        "label": "order",
+        "placeholder": "1"
       }
     },
-    "uid" : {
-      "type" : "UID",
-      "config" : {
-        "label" : "Slug",
-        "placeholder" : "nla"
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug",
+        "placeholder": "nla"
       }
     },
-    "project_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading2",
-        "label" : "Project Title",
-        "placeholder" : "Name of project"
+    "project_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "label": "Project Title",
+        "placeholder": "Name of project"
       }
     },
-    "services" : {
-      "type" : "Text",
-      "config" : {
-        "label" : "services",
-        "placeholder" : "art direction"
+    "services": {
+      "type": "Text",
+      "config": {
+        "label": "services",
+        "placeholder": "art direction"
       }
     },
-    "lede" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "Lede",
-        "placeholder" : "One liner about the project"
+    "lede": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Lede",
+        "placeholder": "One liner about the project"
       }
     },
-    "feature_image" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : {
-          "width" : 2000,
-          "height" : 1333
+    "feature_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 2000,
+          "height": 1333
         },
-        "thumbnails" : [ ],
-        "label" : "Feature image"
+        "thumbnails": [],
+        "label": "Feature image"
       }
     },
-    "introduction" : {
-      "type" : "StructuredText",
-      "config" : {
-        "multi" : "paragraph,em,hyperlink",
-        "label" : "Introduction",
-        "placeholder" : "Paragraph outlining the client and an overview of the work we did for them"
+    "introduction": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph,em,hyperlink",
+        "label": "Introduction",
+        "placeholder": "Paragraph outlining the client and an overview of the work we did for them"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": null,
+        "choices": {
+          "body": {
+            "type": "Slice",
+            "fieldset": "project image",
+            "description": "Images of project",
+            "icon": "image",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": 2000,
+                    "height": 1333
+                  },
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              }
+            }
+          },
+          "project_body_text": {
+            "type": "Slice",
+            "fieldset": "project body text",
+            "description": "text",
+            "icon": "format_color_text",
+            "display": "grid",
+            "non-repeat": {},
+            "repeat": {
+              "body_text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, hyperlink",
+                  "label": "body text",
+                  "placeholder": "Body text"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
