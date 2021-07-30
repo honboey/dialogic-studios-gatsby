@@ -6,7 +6,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function IndexPage( {data} ) {
-  const image = getImage(data.allFile.nodes[0])
+  const image = getImage(data.allPrismicProject.nodes[0].data.feature_image.gatsbyImageData)
+  console.log(image)
   return (
     <Layout>
       <section className="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal md:w-7/12 lg:w-1/2 md:float-right mb-8 md:mb-12 xl:mb-16">
@@ -15,24 +16,15 @@ function IndexPage( {data} ) {
 
       <section className="clear-right mb-8 md:mb-12 xl:mb-16">
         <ul>
-          <FeaturedProjectItem 
-            projectName="National Library of Australia" 
-            services="Art direction, editorial, campaign" 
-            featureImage={image} 
-            altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
-            />
-          <FeaturedProjectItem 
-            projectName="National Library of Australia" 
-            services="Art direction, editorial, campaign" 
-            featureImage={image} 
-            altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
-            />
-          <FeaturedProjectItem 
-            projectName="National Library of Australia" 
-            services="Art direction, editorial, campaign" 
-            featureImage={image} 
-            altText="Two boys and an adult man accessing the National Library digital archive on a tablet, while seated on a verandah in front of their country Australian home"
-            />
+          {
+            data.allPrismicProject.nodes.map((element) => (
+              <FeaturedProjectItem 
+                projectName={element.data.project_title.text}
+                services={element.data.services}
+                featureImage={getImage(element.data.feature_image.gatsbyImageData)}
+                />
+            ))
+          }
         </ul>
 
         <p className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl"><Link to="/work">View our complete portfolio</Link></p>
@@ -62,14 +54,25 @@ function IndexPage( {data} ) {
 }
 
 export const query = graphql`
-  query {
-    allFile(filter: {id: {eq: "5ece5359-e721-5651-979f-14ba9f039969"}}) {
-      nodes {
-        childImageSharp {
+query {
+  allPrismicProject(
+    sort: {fields: data___order}
+    filter: {data: {featured: {eq: true}}}
+  ) {
+    nodes {
+      data {
+        project_title {
+          text
+        }
+        order
+        services
+        feature_image {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
+      uid
     }
-  }  
+  }
+}
 `
 export default IndexPage;
