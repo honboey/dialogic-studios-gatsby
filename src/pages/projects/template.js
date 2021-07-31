@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import SliceZone from '../../components/SliceZone'
+
 import { graphql, Link } from "gatsby";
 import { getImage, StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import { RichText } from "prismic-reactjs";
@@ -9,7 +9,7 @@ import htmlSerializerProjects from "../../utils/htmlSerializerProjects"
 
 import "../../styles/global.css";
 
-function ProjectTemplatePage( {data} ) {
+function TemplatePage( {data} ) {
   return (
     <Layout>
         <h2 className="text-2xl lg:text-3xl xl:text-4xl leading-normal lg:leading-normal xl:leading-normal">{data.prismicProject.data.project_title.text}</h2>
@@ -59,14 +59,19 @@ function ProjectTemplatePage( {data} ) {
             </table>
         </div>
 
-        <SliceZone slices={data.prismicProject.data.body}/>
-        {console.log(data.prismicProject.data.body)}
+        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
+
+        <StaticImage className="w-full mb-6 md:mb-10 xl:mb-14" src="../../images/nla01.jpg" alt="Two boys sitting on a porch in rural Australia" />
+
+        <p className="text-2xl lg:text-3xl xl:text-4xl mb-6 md:mb-10 xl:mb-14">
+            <Link to="../work">View more of our work</Link>
+        </p>
     </Layout>
   );
 }
 
 export const query = graphql`
-query PrismicProjectQuery($id: String!) {
+query PrismicProjectTemplateQuery($id: String!) {
     prismicProject(id: {eq: $id}) {
       data {
         feature_image {
@@ -107,4 +112,4 @@ query PrismicProjectQuery($id: String!) {
   }
 `
 
-export default ProjectTemplatePage;
+export default TemplatePage;

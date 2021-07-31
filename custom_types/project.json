@@ -71,15 +71,33 @@
       "config": {
         "labels": null,
         "choices": {
-          "body": {
+          "text": {
             "type": "Slice",
-            "fieldset": "project image",
-            "description": "Images of project",
+            "fieldset": "Text",
+            "description": "Text",
+            "icon": "text_format",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "text",
+                  "placeholder": "Place body text here"
+                }
+              }
+            }
+          },
+          "imagery_single_landscape": {
+            "type": "Slice",
+            "fieldset": "imagery single landscape",
+            "description": "Single landscape image",
             "icon": "image",
             "display": "list",
             "non-repeat": {},
             "repeat": {
-              "image": {
+              "landscape_image": {
                 "type": "Image",
                 "config": {
                   "constraint": {
@@ -87,25 +105,7 @@
                     "height": 1333
                   },
                   "thumbnails": [],
-                  "label": "image"
-                }
-              }
-            }
-          },
-          "project_body_text": {
-            "type": "Slice",
-            "fieldset": "project body text",
-            "description": "text",
-            "icon": "format_color_text",
-            "display": "grid",
-            "non-repeat": {},
-            "repeat": {
-              "body_text": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, hyperlink",
-                  "label": "body text",
-                  "placeholder": "Body text"
+                  "label": "landscape image"
                 }
               }
             }
