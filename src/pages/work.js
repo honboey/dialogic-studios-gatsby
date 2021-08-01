@@ -16,17 +16,17 @@ function WorkPage( {data} ) {
           <div id="services" className="w-1/2 md:w-7/12 lg:w-1/2 xl:w-full flex xl:block" >
             <div className="w-1/2 xl:w-full">
               <ul>
-                <li><a className="all text-ds-orange" href="#">All</a></li>
-                <li><a className="identity" href="#">Identity</a></li>
-                <li><a className="art-direction" href="#">Art direction</a></li>
-                <li><a className="web" href="#">Web</a></li>
+                <li><p className="all text-ds-orange">All</p></li>
+                <li><p className="identity">Identity</p></li>
+                <li><p className="art-direction">Art direction</p></li>
+                <li><p className="web">Web</p></li>
               </ul>
             </div>
             <div className="w-1/2 xl:w-full">
               <ul>
-                <li><a className="editorial" href="#">Editorial</a></li>
-                <li><a className="campaign" href="#">Campaign</a></li>
-                <li><a className="packaging" href="#">Packaging</a></li>
+                <li><p className="editorial">Editorial</p></li>
+                <li><p className="campaign">Campaign</p></li>
+                <li><p className="packaging">Packaging</p></li>
               </ul>
             </div>
           </div>

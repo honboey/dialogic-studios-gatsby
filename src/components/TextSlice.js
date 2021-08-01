@@ -4,11 +4,13 @@ import htmlSerializerProjects from "../utils/htmlSerializerProjects"
 
 import "../styles/global.css";
 
-function TextSlice() {
+function TextSlice(props) {
     return (
-        <div className="md:w-7/12 lg:w-1/2 float-right">
-            <p>Test</p>
-            {/* <RichText htmlSerializer={htmlSerializerProjects} render={data.prismicProject.data.body[0].items[0].text.raw[0].text} /> */}
+        <div className="flex justify-end">
+            <div className="md:w-5/12 lg:w-1/2"></div>
+            <div className="md:w-7/12 lg:w-1/2">
+                <RichText htmlSerializer={htmlSerializerProjects} render={props.slice.items[0].text.raw} />
+            </div>    
         </div>
     )
 }
