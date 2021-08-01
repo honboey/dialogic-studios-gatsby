@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import FeaturedProjectItem from "../components/FeaturedProjectItem";
 import { graphql, Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function IndexPage( {data} ) {
