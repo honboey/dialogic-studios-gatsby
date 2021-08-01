@@ -3,7 +3,7 @@ import * as React from "react";
 import Layout from "../../components/Layout";
 import SliceZone from '../../components/SliceZone'
 import { graphql, Link } from "gatsby";
-import { getImage, StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { RichText } from "prismic-reactjs";
 import htmlSerializerProjects from "../../utils/htmlSerializerProjects"
 
@@ -60,7 +60,11 @@ function ProjectTemplatePage( {data} ) {
         </div>
 
         <SliceZone slices={data.prismicProject.data.body}/>
-        {console.log(data.prismicProject.data.body)}
+
+        <p className="text-2xl lg:text-3xl xl:text-4xl mb-6 md:mb-10 xl:mb-14">
+            <Link to="../work">View more of our work</Link>
+        </p>
+
     </Layout>
   );
 }

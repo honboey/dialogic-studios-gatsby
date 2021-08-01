@@ -69,7 +69,7 @@
       "type": "Slices",
       "fieldset": "Slice zone",
       "config": {
-        "labels": null,
+        "labels": {},
         "choices": {
           "text": {
             "type": "Slice",
