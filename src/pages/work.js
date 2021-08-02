@@ -34,12 +34,12 @@ function WorkPage( {data} ) {
 
         <section id="work" className="xl:w-5/6">
           <ul>
-            {
+            { 
               data.allPrismicProject.nodes.map((element) => (
                 <ProjectItem
                   key={element.uid} 
                   projectName={element.data.project_title.text}
-                  services={element.data.services}
+                  services={element.tags}
                   featureImage={getImage(element.data.feature_image.gatsbyImageData)}
                   altText={element.data.feature_image.alt}
                   slug={element.uid}
@@ -71,6 +71,7 @@ query {
         }
       }
       uid
+      tags
     }
   }
 }

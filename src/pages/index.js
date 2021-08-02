@@ -20,7 +20,7 @@ function IndexPage( {data} ) {
               <FeaturedProjectItem
                 key={element.uid}
                 projectName={element.data.project_title.text}
-                services={element.data.services}
+                services={element.tags}
                 featureImage={getImage(element.data.feature_image.gatsbyImageData)}
                 altText={element.data.feature_image.alt}
                 slug={element.uid}
@@ -74,6 +74,7 @@ query {
         }
       }
       uid
+      tags
     }
   }
 }
