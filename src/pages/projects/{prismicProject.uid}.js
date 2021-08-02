@@ -10,6 +10,7 @@ import htmlSerializerProjects from "../../utils/htmlSerializerProjects"
 import "../../styles/global.css";
 
 function ProjectTemplatePage( {data} ) {
+  console.log(data)
   return (
     <Layout>
         <h2 className="text-2xl lg:text-3xl xl:text-4xl leading-normal lg:leading-normal xl:leading-normal">{data.prismicProject.data.project_title.text}</h2>
@@ -92,6 +93,7 @@ query PrismicProjectQuery($id: String!) {
             slice_type
             items {
               landscape_image {
+                alt
                 gatsbyImageData(placeholder: BLURRED)
               }
             }
@@ -102,6 +104,16 @@ query PrismicProjectQuery($id: String!) {
             items {
               text {
                 raw
+              }
+            }
+          }
+          ... on PrismicProjectDataBodyImageRow {
+            id
+            slice_type
+            items {
+              image_row {
+                alt
+                gatsbyImageData(placeholder: BLURRED)
               }
             }
           }

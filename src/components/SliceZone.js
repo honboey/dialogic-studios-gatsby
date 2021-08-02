@@ -1,11 +1,13 @@
 import * as React from "react"
 import TextSlice from "./TextSlice"
 import SingleLandscapeImageSlice from "./SingleLandscapeImageSlice"
+import ImageRowSlice from "./ImageRowSlice"
 
 function SliceZone({ slices }) {
     const sliceComponents = {
         imagery_single_landscape: SingleLandscapeImageSlice,
-        text: TextSlice
+        text: TextSlice,
+        image_row: ImageRowSlice
     }
     return slices.map((slice, index) => {
         const SliceComponent = sliceComponents[slice.slice_type]
