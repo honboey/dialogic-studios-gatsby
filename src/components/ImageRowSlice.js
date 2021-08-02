@@ -3,7 +3,6 @@ import "../styles/global.css";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 function ImageRowSlice(props) {
-    console.log(props)
     return (
         <div class="lg:flex lg:justify-between">
             {props.slice.items.map((image, index) => (

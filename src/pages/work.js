@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 import ProjectItem from "../components/ProjectItem";
 import { graphql } from "gatsby";
@@ -6,10 +6,13 @@ import { getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function WorkPage( {data} ) {
+  const [displayArray, filterDisplayArray] = useState(data)
+  console.log(displayArray)
+
   return (
     <Layout>
       <div className="xl:flex">
-        <nav className="flex xl:block xl:w-1/6 text-sm sm:text-lg lg:text-xl xl:text-2xl leading-normal lg:leading-normal xl:leading-normal border-t border-b border-black xl:border-none py-3 mb-8 md:mb-12 xl:mb-16">
+        <div className="flex xl:block xl:w-1/6 text-sm sm:text-lg lg:text-xl xl:text-2xl leading-normal lg:leading-normal xl:leading-normal border-t border-b border-black xl:border-none py-3 mb-8 md:mb-12 xl:mb-16">
           <div className="w-1/2 md:w-5/12 lg:w-1/2 xl:w-full mb-4 lg:mb-8">
             <h2>Our services</h2>
           </div>
@@ -30,7 +33,7 @@ function WorkPage( {data} ) {
               </ul>
             </div>
           </div>
-        </nav>
+        </div>
 
         <section id="work" className="xl:w-5/6">
           <ul>
