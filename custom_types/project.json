@@ -101,8 +101,8 @@
                 "type": "Image",
                 "config": {
                   "constraint": {
-                    "width": 2000,
-                    "height": 1333
+                    "width": null,
+                    "height": null
                   },
                   "thumbnails": [],
                   "label": "landscape image"

@@ -8,7 +8,6 @@ import "../styles/global.css";
 function WorkPage( {data} ) {
   // Set state
   const [displayArray, setDisplayArray] = useState(data.allPrismicProject.nodes)
-  const [display, setDisplay] = useState(" display-block")
   const [opacity, setOpacity] = useState(" opacity-100")
 
   // Filtering items
@@ -75,7 +74,6 @@ function WorkPage( {data} ) {
                 altText={element.data.feature_image.alt}
                 slug={element.uid}
                 opacity={opacity}
-                display={display}
                 />
             ))
             }
