@@ -3,20 +3,31 @@ import Layout from "../components/Layout";
 import ProjectItem from "../components/ProjectItem";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import clsx from 'clsx';
 import "../styles/global.css";
 
 function WorkPage( {data} ) {
   // Set state
   const [displayArray, setDisplayArray] = useState(data.allPrismicProject.nodes)
   const [opacity, setOpacity] = useState(" opacity-100")
+  const [active, setActive] = useState(" text-black")
+  // text-ds-orange
 
   // Filtering items
   function filterItems(event) {
     setDisplayArray(data.allPrismicProject.nodes.filter(element => element.tags.includes(event.target.id)))
   }
 
+  // Event String -> String
+  // If the id of a button equals the id of the event, render it orange
+  function determineActiveCategory(event) {
+
+  }
+
   function filterClickHandler(event) {
-    console.log(event.target.id)    
+    console.log(event.target.className)    
+    console.log(event.target.id)
+         
     // Fade out
     setOpacity(" opacity-0")
     // Filter
@@ -47,17 +58,17 @@ function WorkPage( {data} ) {
           <div id="services" className="w-1/2 md:w-7/12 lg:w-1/2 xl:w-full flex xl:block" >
             <div className="w-1/2 xl:w-full">
               <ul>
-                <li><button id="all" className="text-ds-orange" onClick={filterClickHandler}>All</button></li>
-                <li><button id="identity" onClick={filterClickHandler}>Identity</button></li>
-                <li><button id="art direction" onClick={filterClickHandler}>Art direction</button></li>
-                <li><button id="web" onClick={filterClickHandler}>Web</button></li>
+                <li><button id="all" className={"underline" + active} onClick={filterClickHandler}>All</button></li>
+                <li><button id="identity" className={"underline" + active} onClick={filterClickHandler}>Identity</button></li>
+                <li><button id="art direction" className={"underline" + active} onClick={filterClickHandler}>Art direction</button></li>
+                <li><button id="web" className={"underline" + active} onClick={filterClickHandler}>Web</button></li>
               </ul>
             </div>
             <div className="w-1/2 xl:w-full">
               <ul>
-                <li><button id="publication" onClick={filterClickHandler}>Publication</button></li>
-                <li><button id="campaign" onClick={filterClickHandler}>Campaign</button></li>
-                <li><button id="packaging" onClick={filterClickHandler}>Packaging</button></li>
+                <li><button id="publication" className="underline" onClick={filterClickHandler}>Publication</button></li>
+                <li><button id="campaign" className="underline" onClick={filterClickHandler}>Campaign</button></li>
+                <li><button id="packaging" className="underline" onClick={filterClickHandler}>Packaging</button></li>
               </ul>
             </div>
           </div>
