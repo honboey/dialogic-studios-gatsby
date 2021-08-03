@@ -6,45 +6,40 @@ import { getImage } from "gatsby-plugin-image";
 import "../styles/global.css";
 
 function WorkPage( {data} ) {
+  // Set state
   const [displayArray, setDisplayArray] = useState(data.allPrismicProject.nodes)
   const [display, setDisplay] = useState(" display-block")
   const [opacity, setOpacity] = useState(" opacity-100")
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6])
 
-  function filterItems() {
-    setDisplayArray(displayArray => displayArray.filter(element => element.uid=="nla"))
+  // Filtering items
+  function filterItems(event) {
+    setDisplayArray(data.allPrismicProject.nodes.filter(element => element.tags.includes(event.target.id)))
   }
 
-  function filterClickHandler() {
-   setTimeout(
-     function() {
-       filterItems()
+  function filterClickHandler(event) {
+    console.log(event.target.id)    
+    // Fade out
+    setOpacity(" opacity-0")
+    // Filter
+    setTimeout(
+      function() {
+        if (event.target.id === "all") {
+          return setDisplayArray(data.allPrismicProject.nodes)
+        } 
+        filterItems(event)
       }, 
-      3000)
+      300)
+    //Fade in
+    setTimeout(
+      function() {
+        setOpacity(" opacity-100")
+      },
+      500
+    )
   }
-
-  function fadeOutClickHandler() {
-    setTimeout(setOpacity(" opacity-0"), 2000)
-  }
-
-  function toggleDisplay() {
-    setDisplay(" hidden")
-  }
-
-  function displayClickHandler() {
-    setTimeout(function() {
-      setDisplay(" hidden")
-    }, 1000)
-  }
-
-
-  
   
   return (
     <Layout>
-      <p>{items}</p>
-      <button onClick={fadeOutClickHandler} className="text-red-500">Test</button>
-      <button onClick={displayClickHandler}>Display</button>
       <div className="xl:flex">
         <div className="flex xl:block xl:w-1/6 text-sm sm:text-lg lg:text-xl xl:text-2xl leading-normal lg:leading-normal xl:leading-normal border-t border-b border-black xl:border-none py-3 mb-8 md:mb-12 xl:mb-16">
           <div className="w-1/2 md:w-5/12 lg:w-1/2 xl:w-full mb-4 lg:mb-8">
@@ -53,20 +48,17 @@ function WorkPage( {data} ) {
           <div id="services" className="w-1/2 md:w-7/12 lg:w-1/2 xl:w-full flex xl:block" >
             <div className="w-1/2 xl:w-full">
               <ul>
-                <li><button 
-                  className="all text-ds-orange"
-                  onClick={filterClickHandler}
-                  >All</button></li>
-                <li><p className="identity">Identity</p></li>
-                <li><p className="art-direction">Art direction</p></li>
-                <li><p className="web">Web</p></li>
+                <li><button id="all" className="text-ds-orange" onClick={filterClickHandler}>All</button></li>
+                <li><button id="identity" onClick={filterClickHandler}>Identity</button></li>
+                <li><button id="art direction" onClick={filterClickHandler}>Art direction</button></li>
+                <li><button id="web" onClick={filterClickHandler}>Web</button></li>
               </ul>
             </div>
             <div className="w-1/2 xl:w-full">
               <ul>
-                <li><p className="editorial">Editorial</p></li>
-                <li><p className="campaign">Campaign</p></li>
-                <li><p className="packaging">Packaging</p></li>
+                <li><button id="publication" onClick={filterClickHandler}>Publication</button></li>
+                <li><button id="campaign" onClick={filterClickHandler}>Campaign</button></li>
+                <li><button id="packaging" onClick={filterClickHandler}>Packaging</button></li>
               </ul>
             </div>
           </div>

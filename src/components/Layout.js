@@ -96,7 +96,7 @@ function Layout({ children }) {
               <li><Link to="/about">About</Link></li>
               <li className="mb-3 lg:mb-6"><Link to="/contact">Contact</Link></li>
               
-              <li><Link to="https://www.instagram.com/dialogicstudios/">Instagram</Link></li>
+              <li><a href="https://www.instagram.com/dialogicstudios/">Instagram</a></li>
             </ul>
           </nav>
           <div className="w-2/3 md:w-1/4">
