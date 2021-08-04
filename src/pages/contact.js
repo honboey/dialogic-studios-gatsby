@@ -1,11 +1,15 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
 import "../styles/global.css";
 
 function ContactPage() {
   return (
     <Layout>
+      <Helmet>
+        <title>Dialogic Studios – Contact</title>
+      </Helmet>
       <div className="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal flex md:justify-end mb-8 lg:mb-16">
         <div className="md:w-7/12 lg:w-1/2">
           <p className="text-sm sm:text-lg lg:text-xl xl:text-2xl text-ds-grey">Telephone / WhatsApp</p>

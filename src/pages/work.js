@@ -4,6 +4,7 @@ import WorkFilterListItem from "../components/WorkFilterListItem";
 import ProjectItem from "../components/ProjectItem";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
 import "../styles/global.css";
 
 function WorkPage( {data} ) {
@@ -43,6 +44,9 @@ function WorkPage( {data} ) {
   
   return (
     <Layout>
+      <Helmet>
+        <title>Dialogic Studios – Work</title>
+      </Helmet>
       <div className="xl:flex">
         <div className="flex xl:block xl:w-1/6 text-sm sm:text-lg lg:text-xl xl:text-2xl leading-normal lg:leading-normal xl:leading-normal border-t border-b border-black xl:border-none py-3 mb-8 md:mb-12 xl:mb-16">
           <div className="w-1/2 md:w-5/12 lg:w-1/2 xl:w-full mb-4 lg:mb-8">

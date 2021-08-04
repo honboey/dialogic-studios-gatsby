@@ -1,10 +1,18 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 import "../styles/global.css";
 
 function Layout({ children }) {
   return (
     <div className="wrapper text-lg lg:text-xl xl:text-2xl leading-normal lg:leading-normal xl:leading-normal">
+      <Helmet>
+        <title>Dialogic Studios</title>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="graphic design, design, Sydney, Australia, art direction, web design, publication"/>
+        <meta name="description" content="Dialogic Studios is a design agency specialising in visual identities and communications. They are located on Gadigal Land in Sydney, Australia."/>
+        <meta name="author" content="Dialogic Studios"/>
+      </Helmet>
       <header className="mb-8 md:mb-12 xl:mb-16">
         <nav className="flex">
           <div className="h-8 w-1/2 md:w-5/12 lg:w-1/2 pt-1">

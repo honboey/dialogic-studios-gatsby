@@ -2,11 +2,15 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
 import "../styles/global.css";
 
 function AboutPage() {
   return (
     <Layout>
+      <Helmet>
+        <title>Dialogic Studios – About</title>
+      </Helmet>
       <div className="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal flex md:justify-end mb-8 lg:mb-16">
         <div className="md:w-7/12 lg:w-1/2">
           <p className="mb-4 lg:mb-8">Dialogic Studios is an agency that specialises in visual communications. Our strengths lie in brand identities, art direction, web design and publication design.</p>
