@@ -34,6 +34,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 350
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "./src/images/favicon.png"
