@@ -127,6 +127,32 @@
                 }
               }
             }
+          },
+          "image_and_text_row": {
+            "type": "Slice",
+            "fieldset": "image and text row",
+            "description": "row of image and text",
+            "icon": "apps",
+            "display": "list",
+            "non-repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "text",
+                  "placeholder": "Appears on right"
+                }
+              }
+            },
+            "repeat": {}
           }
         }
       }

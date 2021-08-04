@@ -116,7 +116,20 @@ query PrismicProjectQuery($id: String!) {
                 gatsbyImageData(placeholder: BLURRED)
               }
             }
-          }
+          }        
+          ... on PrismicProjectDataBodyImageAndTextRow {
+            id
+            slice_type
+            primary {
+              image {
+                gatsbyImageData
+                alt
+              }
+              text {
+                raw
+              }
+            }
+          }        
         }
       }
     }
