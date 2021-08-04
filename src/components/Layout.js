@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
+import PageTransition from "gatsby-plugin-page-transitions";
 import "../styles/global.css";
 
 function Layout({ children }) {
@@ -93,8 +94,10 @@ function Layout({ children }) {
           </ul>
         </nav>
       </header>
-
-      {children}
+      
+      <PageTransition>
+        {children}
+      </PageTransition>
 
       <footer>
         <div className="border-t border-black flex flex-wrap justify-between pt-12 md:pt-16 xl:pt-20 text-xs sm:text-sm lg:base">

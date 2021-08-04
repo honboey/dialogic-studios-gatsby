@@ -32,13 +32,13 @@ function WorkPage( {data} ) {
         } 
         filterItems(event)
       }, 
-      300)
+      150)
     //Fade in
     setTimeout(
       function() {
         setOpacity(" opacity-100")
       },
-      500
+      250
     )
   }
   
