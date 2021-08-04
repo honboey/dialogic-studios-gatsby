@@ -29,7 +29,7 @@ function ProjectTemplatePage( {data} ) {
         <SliceZone slices={data.prismicProject.data.body}/>
 
         <p className="text-2xl lg:text-3xl xl:text-4xl mb-6 md:mb-10 xl:mb-14">
-            <Link to="../work">View more of our work</Link>
+            <Link to="../../work">View more of our work</Link>
         </p>
     </Layout>
   );
