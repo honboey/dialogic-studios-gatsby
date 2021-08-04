@@ -1,158 +1,159 @@
 {
-  "Main": {
-    "featured": {
-      "type": "Boolean",
-      "config": {
-        "placeholder_false": "not featured",
-        "placeholder_true": "featured",
-        "default_value": false,
-        "label": "featured"
+  "Main" : {
+    "featured" : {
+      "type" : "Boolean",
+      "config" : {
+        "placeholder_false" : "not featured",
+        "placeholder_true" : "featured",
+        "default_value" : false,
+        "label" : "featured"
       }
     },
-    "order": {
-      "type": "Number",
-      "config": {
-        "label": "order",
-        "placeholder": "1"
+    "order" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "order",
+        "placeholder" : "1"
       }
     },
-    "uid": {
-      "type": "UID",
-      "config": {
-        "label": "Slug",
-        "placeholder": "nla"
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug",
+        "placeholder" : "nla"
       }
     },
-    "project_title": {
-      "type": "StructuredText",
-      "config": {
-        "single": "heading2",
-        "label": "Project Title",
-        "placeholder": "Name of project"
+    "project_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Project Title",
+        "placeholder" : "Name of project"
       }
     },
-    "services": {
-      "type": "Text",
-      "config": {
-        "label": "services",
-        "placeholder": "art direction"
+    "lede" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Lede",
+        "placeholder" : "One liner about the project"
       }
     },
-    "lede": {
-      "type": "StructuredText",
-      "config": {
-        "single": "paragraph",
-        "label": "Lede",
-        "placeholder": "One liner about the project"
-      }
-    },
-    "feature_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {
-          "width": 2000,
-          "height": 1333
+    "feature_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 2000,
+          "height" : 1333
         },
-        "thumbnails": [],
-        "label": "Feature image"
+        "thumbnails" : [ ],
+        "label" : "Feature image"
       }
     },
-    "introduction": {
-      "type": "StructuredText",
-      "config": {
-        "multi": "paragraph,em,hyperlink",
-        "label": "Introduction",
-        "placeholder": "Paragraph outlining the client and an overview of the work we did for them"
+    "introduction" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,em,hyperlink",
+        "label" : "Introduction",
+        "placeholder" : "Paragraph outlining the client and an overview of the work we did for them"
       }
     },
-    "body": {
-      "type": "Slices",
-      "fieldset": "Slice zone",
-      "config": {
-        "labels": null,
-        "choices": {
-          "text": {
-            "type": "Slice",
-            "fieldset": "Text",
-            "description": "Text",
-            "icon": "text_format",
-            "display": "list",
-            "non-repeat": {},
-            "repeat": {
-              "text": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph",
-                  "label": "text",
-                  "placeholder": "Place body text here"
+    "project_team_table" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "preformatted",
+        "label" : "Project team table",
+        "placeholder" : "Table of project team members"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : null,
+        "choices" : {
+          "text" : {
+            "type" : "Slice",
+            "fieldset" : "Text",
+            "description" : "Text",
+            "icon" : "text_format",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "text",
+                  "placeholder" : "Place body text here"
                 }
               }
             }
           },
-          "imagery_single_landscape": {
-            "type": "Slice",
-            "fieldset": "imagery single landscape",
-            "description": "Single landscape image",
-            "icon": "image",
-            "display": "list",
-            "non-repeat": {},
-            "repeat": {
-              "landscape_image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {
-                    "width": null,
-                    "height": null
+          "imagery_single_landscape" : {
+            "type" : "Slice",
+            "fieldset" : "imagery single landscape",
+            "description" : "Single landscape image",
+            "icon" : "image",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "landscape_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : null,
+                    "height" : null
                   },
-                  "thumbnails": [],
-                  "label": "landscape image"
+                  "thumbnails" : [ ],
+                  "label" : "landscape image"
                 }
               }
             }
           },
-          "image_row": {
-            "type": "Slice",
-            "fieldset": "image row",
-            "description": "row of images",
-            "icon": "image_aspect_ratio",
-            "display": "list",
-            "non-repeat": {},
-            "repeat": {
-              "image_row": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "image row"
+          "image_row" : {
+            "type" : "Slice",
+            "fieldset" : "image row",
+            "description" : "row of images",
+            "icon" : "image_aspect_ratio",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "image_row" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "image row"
                 }
               }
             }
           },
-          "image_and_text_row": {
-            "type": "Slice",
-            "fieldset": "image and text row",
-            "description": "row of image and text",
-            "icon": "apps",
-            "display": "list",
-            "non-repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "image"
+          "image_and_text_row" : {
+            "type" : "Slice",
+            "fieldset" : "image and text row",
+            "description" : "row of image and text",
+            "icon" : "apps",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "image"
                 }
               },
-              "text": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph",
-                  "label": "text",
-                  "placeholder": "Appears on right"
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "text",
+                  "placeholder" : "Appears on right"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           }
         }
       }

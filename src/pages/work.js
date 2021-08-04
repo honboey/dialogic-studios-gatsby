@@ -99,7 +99,6 @@ query {
           text
         }
         order
-        services
         feature_image {
           gatsbyImageData(placeholder: BLURRED)
           alt
