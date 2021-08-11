@@ -114,7 +114,7 @@ function Layout({ children }) {
             <p className="mb-3 lg:mb-6">Site designed by Dialogic Studios.</p>
             <p>Site built by Dialogic Studios and <a href="https://thislittleduck.com/">This Little Duck</a>.</p>
 
-            <p className="mb-6">Type designed by<a href="https://klim.co.nz/">Klim Type Foundry</a>.</p>
+            <p className="mb-6">Type designed by <a href="https://klim.co.nz/">Klim Type Foundry</a>.</p>
           </div>
 
           <div className="md:w-1/2">

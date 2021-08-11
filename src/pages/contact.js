@@ -43,7 +43,7 @@ function ContactPage() {
         <section className="md:w-7/12 lg:w-1/2">
           <p className="mb-4 lg:mb-8">If you have a project you’d like to collaborate on then drop us a line by phone or email. We’ll have a chat with you about what you are after and send through a pack that outlines our process and fees.</p>
 
-          <p>Most jobs start with a briefing workshop followed by concept designs and roll out. We know that the journey can be confusing so we’ve laid it all out in our process and fees pack. Get in touch if you’d like to have a read.</p>
+          <p className="mb-4 lg:mb-8">Most jobs start with a briefing workshop followed by concept designs and roll out. We know that the journey can be confusing so we’ve laid it all out in our process and fees pack. Get in touch if you’d like to have a read.</p>
         </section>
       </div>
     </Layout>
