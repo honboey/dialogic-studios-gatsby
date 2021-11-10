@@ -10,9 +10,9 @@ function Layout({ children }) {
       <Helmet>
         <title>Dialogic Studios</title>
         <meta charset="utf-8" />
-        <meta name="keywords" content="graphic design, design, Sydney, Australia, art direction, web design, publication"/>
-        <meta name="description" content="Dialogic Studios is a design agency specialising in visual identities and communications. They are located on Gadigal Land in Sydney, Australia."/>
-        <meta name="author" content="Dialogic Studios"/>
+        <meta name="keywords" content="graphic design, design, Sydney, Australia, art direction, web design, publication" />
+        <meta name="description" content="Dialogic Studios is a design agency specialising in visual identities and communications. They are located on Gadigal Land in Sydney, Australia." />
+        <meta name="author" content="Dialogic Studios" />
       </Helmet>
       <header className="mb-8 md:mb-12 xl:mb-16">
         <nav className="flex">
@@ -94,7 +94,7 @@ function Layout({ children }) {
           </ul>
         </nav>
       </header>
-      
+
       <PageTransition>
         {children}
       </PageTransition>
@@ -106,14 +106,12 @@ function Layout({ children }) {
               <li><Link to="/work">Work</Link></li>
               <li><Link to="/about">About</Link></li>
               <li className="mb-3 lg:mb-6"><Link to="/contact">Contact</Link></li>
-              
+
               <li><a href="https://www.instagram.com/dialogicstudios/">Instagram</a></li>
             </ul>
           </nav>
           <div className="w-2/3 md:w-1/4">
-            <p className="mb-3 lg:mb-6">Site designed by Dialogic Studios.</p>
-            <p>Site built by Dialogic Studios and <a href="https://thislittleduck.com/">This Little Duck</a>.</p>
-
+            <p className="mb-3 lg:mb-6">Site designed and built by Dialogic Studios.</p>
             <p className="mb-6">Type designed by <a href="https://klim.co.nz/">Klim Type Foundry</a>.</p>
           </div>
 
