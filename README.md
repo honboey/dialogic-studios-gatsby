@@ -1,13 +1,13 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
 
-## 🚀 Quick start
+
+# Dialogic Studios
+Dialogic Studio's portfolio website. The site can be found on [dialogicstudios.com.au](https://dialogicstudios.com.au/).
+
+Dialogic Studios is an agency that specialises in visual communications. Their strengths lie in brand identities, art direction, web design and publication design.
+
+This project uses [TailwindCSS](https://tailwindcss.com/) and React bootstrapped to [Gatsby](https://www.gatsbyjs.com/).
+
+## Quick Start
 
 1.  **Create a Gatsby site.**
 
