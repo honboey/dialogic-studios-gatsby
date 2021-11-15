@@ -5,7 +5,7 @@ Dialogic Studio's portfolio website. The site can be found on [dialogicstudios.c
 
 Dialogic Studios is an agency that specialises in visual communications. Their strengths lie in brand identities, art direction, web design and publication design.
 
-This project uses [TailwindCSS](https://tailwindcss.com/) and React bootstrapped to [Gatsby](https://www.gatsbyjs.com/).
+This project uses [TailwindCSS](https://tailwindcss.com/) and React bootstrapped to [Gatsby](https://www.gatsbyjs.com/) with [Prismic](https://prismic.io/) as its CMS.
 
 ## Quick Start
 
