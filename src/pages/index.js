@@ -10,7 +10,7 @@ function IndexPage( {data} ) {
   return (
     <Layout>
       <section className="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal md:w-7/12 lg:w-1/2 md:float-right mb-8 md:mb-12 xl:mb-16">
-        <p>Dialogic Studios creates visual identities and communications for great organisations. We work on Gadigal land in Sydney, Australia.</p>
+        <p>Dialogic Studios is the personal graphic design practice of Hon Boey. We work on Gadigal land in Sydney, Australia.</p>
       </section>
 
       <section className="clear-right mb-8 md:mb-12 xl:mb-16">
