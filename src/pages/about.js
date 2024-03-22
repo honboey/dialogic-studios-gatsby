@@ -13,9 +13,7 @@ function AboutPage() {
       </Helmet>
       <div className="text-2xl leading-normal lg:text-3xl lg:leading-normal xl:text-4xl xl:leading-normal flex md:justify-end mb-8 lg:mb-16">
         <div className="md:w-7/12 lg:w-1/2">
-          <p className="mb-4 lg:mb-8">Dialogic Studios is the personal practice of Hon Boey, specialising in visual communications. Our strengths lie in brand identities, art direction, web design and publication design.</p>
-
-          <p>Our services give organisations a visual voice that is true to their brand, values and personality. We also create systems that allow this voice to be replicated consistently and efficiently.</p>
+          <p className="mb-4 lg:mb-8">Dialogic Studios is the personal practice of Hon Boey, specialising in brand identities, art direction, web design and publication design.</p>
         </div>
       </div>
 
